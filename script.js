@@ -18,8 +18,11 @@ hoverElements.forEach((element) => {
     element.addEventListener("mouseover", () => {
         element.style.backgroundColor = "blue";
     });
+});
 
-    element.addEventListener("mouseleave", () => {
-        element.style.backgroundColor = "antique-white";
-    })
+
+hoverElements.forEach((element) => {
+    element.addEventListener("mouseout", () => {
+        element.style.backgroundColor = "antiquewhite";
+    });
 });
