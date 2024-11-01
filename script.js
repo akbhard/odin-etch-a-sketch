@@ -16,13 +16,17 @@ const hoverElements = document.querySelectorAll(".col")
 
 hoverElements.forEach((element) => {
     element.addEventListener("mouseover", () => {
-        element.style.backgroundColor = "blue";
+        const colors = ['black','red','blue','green','purple','orange','yellow']
+        for(i=0;i<colors.length;i++) {
+            let newColor = Math.floor(Math.random()*colors.length)
+            element.style.backgroundColor = colors[newColor];
+        }
     });
 });
 
 
 hoverElements.forEach((element) => {
     element.addEventListener("mouseout", () => {
-        element.style.backgroundColor = "antiquewhite";
+        element.style.background = "antiquewhite";
     });
 });
