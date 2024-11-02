@@ -27,3 +27,14 @@ hoverElements.forEach((element) => {
         element.style.background = "antiquewhite";
     });
 });
+
+const btn = document.querySelector("button")
+btn.addEventListener("click", () => {
+    let input = prompt("Enter in a number from 1-100")
+
+    if (input > 100){
+        alert("You cannot go over 100")
+    } else {
+        alert(`${input} is ok`)
+    }
+})
