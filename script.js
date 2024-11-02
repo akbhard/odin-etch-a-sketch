@@ -16,11 +16,8 @@ const hoverElements = document.querySelectorAll(".col")
 
 hoverElements.forEach((element) => {
     element.addEventListener("mouseover", () => {
-        const colors = ['black','red','blue','green','purple','orange','yellow']
-        for(i=0;i<colors.length;i++) {
-            let newColor = Math.floor(Math.random()*colors.length)
-            element.style.backgroundColor = colors[newColor];
-        }
+            let newColor = `rgb(${Math.random()*255},${Math.random()*255},${Math.random()*255})`
+            element.style.backgroundColor = newColor;
     });
 });
 
